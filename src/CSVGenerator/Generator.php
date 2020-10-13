@@ -30,13 +30,14 @@ class Generator
             'Kod rabatowy ' => 'promo_code.code',
             'status ' => 'status.name'
         ],
-        'output_charset' => 'windows-1250'
+        'output_charset' => 'windows-1250',
+        'output_filename'=>'file.csv'
     ];
 
     public function __construct(array $config = null)
     {
         if ($config) {
-            $this->config += $config;
+            $this->config = array_merge($this->config,$config);
         }
     }
 
@@ -101,9 +102,8 @@ class Generator
     public function download()
     {
         $this->generate();
-
         header("Content-type:charset=utf-8");
-        header("Content-Disposition:attachment; filename=file.csv");
+        header("Content-Disposition:attachment; filename=".$this->config['output_filename']);
         header("Pragma:no-cache");
         header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
         header("Expires:0");
