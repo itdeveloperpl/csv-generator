@@ -26,7 +26,6 @@ class Generator
             "Imię " => 'customer.first_name',
             'Nazwisko ' => 'customer.last_name',
             'Email ' => 'customer.user.email',
-
             'status ' => 'status.name'
         ],
         'output_charset' => 'windows-1250',
