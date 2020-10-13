@@ -26,8 +26,7 @@ class Generator
             "Imię " => 'customer.first_name',
             'Nazwisko ' => 'customer.last_name',
             'Email ' => 'customer.user.email',
-            'Suma ' => 'total',
-            'Kod rabatowy ' => 'promo_code.code',
+
             'status ' => 'status.name'
         ],
         'output_charset' => 'windows-1250',
