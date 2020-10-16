@@ -2,7 +2,7 @@
     "name": "itdeveloperpl/csv-generator",
     "description": "CSV generating library",
     "type": "library",
-    "version":"1.0.1",
+    "version":"1.0.3",
     "authors": [
         {
             "name": "Bartosz Bielecki"
