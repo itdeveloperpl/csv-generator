@@ -13,5 +13,6 @@
         "psr-4": {
             "itdeveloperpl\\CSVGenerator\\": "src/CSVGenerator"
         }
-    }
+    },
+    "license": "MIT"
 }
