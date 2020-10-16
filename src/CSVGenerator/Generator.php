@@ -24,11 +24,7 @@ class Generator
             'Źródło zamówienia' => 'agent.name',
             'Dodane przez' => 'broker.name',
             "Imię " => 'customer.first_name',
-            'Nazwisko ' => 'customer.last_name',
-            'Email ' => 'customer.user.email',
-            'Suma ' => 'total',
-            'Kod rabatowy ' => 'promo_code.code',
-            'status ' => 'status.name'
+            'Nazwisko ' => 'customer.last_name'
         ],
         'output_charset' => 'iso-8859-2',
         'output_filename'=>'file.csv'
