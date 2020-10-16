@@ -26,9 +26,11 @@ class Generator
             "Imię " => 'customer.first_name',
             'Nazwisko ' => 'customer.last_name',
             'Email ' => 'customer.user.email',
+            'Suma ' => 'total',
+            'Kod rabatowy ' => 'promo_code.code',
             'status ' => 'status.name'
         ],
-        'output_charset' => 'windows-1250',
+        'output_charset' => 'iso-8859-2',
         'output_filename'=>'file.csv'
     ];
 
@@ -67,8 +69,7 @@ class Generator
     {
         if ($this->config['output_charset'] != 'utf-8') {
             foreach ($data as $key => $val) {
-                $data[$key] = iconv("utf-8", $this->config['output_charset'],
-                    $val);
+                $data[$key] = mb_convert_encoding($val,$this->config['output_charset']);
             }
         }
         return $data;
